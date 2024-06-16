@@ -17,7 +17,7 @@ Check out the code snippet and see how it works in action! I’m thrilled to see
 
 因为我跑的是mac环境，window环境见：windows 音量控制模块
 import os
-#参考：
+参考：
 def set_volume_macos(volume):
     os.system(f"osascript -e 'set volume output volume {volume}'")
 
@@ -29,13 +29,15 @@ def get_volume_macos():
 
 windows 音量控制模块 参考：https://pypi.org/project/pycaw/ Usage
 or python获取并修改电脑音量:https://www.cnblogs.com/yunhgu/p/14980109.html
-# devices = AudioUtilities.GetSpeakers()
-# interface = devices.Activate(
-#     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-# volume = interface.QueryInterface(IAudioEndpointVolume)
-#
-# volRange = volume.GetVolumeRange()
-# minVol = volRange[0]
-# maxVol = volRange[1]
-# volume.SetMasterVolumeLevel(-20.0, None)
+devices = AudioUtilities.GetSpeakers()
+interface = devices.Activate(
+     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+volume = interface.QueryInterface(IAudioEndpointVolume)
+
+volRange = volume.GetVolumeRange()
+minVol = volRange[0]
+maxVol = volRange[1]
+volume.SetMasterVolumeLevel(-20.0, None)
+
+
 
