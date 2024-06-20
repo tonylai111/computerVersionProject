@@ -64,9 +64,19 @@ a = a.reshape(100,100)
 print(f"type:{a.dtype},shape:{a.shape}")
 
 ########
-# 数组的基本运算
+# 数组的基本运算 标量和数组之间的运算 ，数组和数组之间的运算
 ########
 
+# 标量除以数组
 arr = np.array([[1,2,3],[4,5,6]])
 print(1/arr)
+# 标量乘以数组
+arr = np.array([[1,2,3],[4,5,6]])
+print(2*arr)
+# 标量 + 数组
+arr = np.array([[1,2,3],[4,5,6]])
+print(2+arr)
+# 标量 - 数组
+arr = np.array([[1,2,3],[4,5,6]])
+print(2-arr)
 
